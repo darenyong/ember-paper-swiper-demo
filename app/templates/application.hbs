@@ -1,0 +1,48 @@
+<h1>hello world</h1>
+<button onClick={{action (mut showSwiper)}}>Click</button>
+
+{{#if showSwiper}}
+  {{#paper-swiper as |swiper|}}
+
+    {{#swiper.callout}}
+      {{#paper-button raised=true onClick=(action (mut showSwiper) false)}}
+        Get Started
+      {{/paper-button}}
+    {{/swiper.callout}}
+
+    {{#swiper.slide class="bear-slide" as |slide|}}
+
+      {{slide.media
+              src="/assets/images/cars.jpg"}}
+
+      {{#slide.headline}}
+        Bear slide
+      {{/slide.headline}}
+
+      {{#slide.subhead}}
+        Bears all day<br>
+        everyday.
+      {{/slide.subhead}}
+
+    {{/swiper.slide}}
+
+    {{#swiper.slide class="elephant-slide" as |slide|}}
+
+      {{slide.media
+              src="/assets/images/black-truck.jpg"}}
+
+      {{#slide.headline}}
+        Elephant slide
+      {{/slide.headline}}
+
+      {{#slide.subhead}}
+        Elephants<br>
+        for the win.
+      {{/slide.subhead}}
+    {{/swiper.slide}}
+
+  {{/paper-swiper}}
+{{/if}}
+
+
+{{outlet}}

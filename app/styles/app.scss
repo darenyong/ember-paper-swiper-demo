@@ -1,0 +1,156 @@
+@import 'ember-paper';
+
+md-dialog.paper-swiper-dialog {
+  //max-width: 85%;
+  //max-width: 45%;
+  max-width: 50%;
+
+  //width:85%;
+  //width:45%;
+
+  // WARNING: don't set min-width of dialog to 0, this causes full screen media query to break.
+  //min-width: 0px;
+  //min-width: 50%;
+  height: 80%
+}
+
+.bear-slide {
+  background-color: #efead5;
+}
+
+.elephant-slide {
+  background-color: olive;
+}
+
+.paper-swiper-dialog-container {
+  //flex-direction: column;
+  .paper-swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    transition-property: transform;
+    overflow: hidden;
+    background-color: #ccc;
+  }
+}
+
+.md-dialog.paper-swiper-content-container {
+  display: block;
+}
+
+.paper-swiper-dialog-container .paper-swiper-container .paper-swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: content-box;
+}
+
+.paper-swiper-slide {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  // NOTE: for unknown reasons, something is setting an inline style width directly to px which is calculated incorrectly
+  // To avoid the inline style from messing up the display of the slide, we force width 100% and ignore inline style defined widths.
+  //width: 100% !important;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  //background-color: #fff
+}
+
+.paper-swiper-slide .paper-swiper-slide-media {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.paper-swiper-dialog-container .paper-swiper-fixed-content {
+  position: absolute;
+  bottom: 24px;
+  width: 100%;
+  height: 84px;
+  box-sizing: border-box;
+}
+
+.paper-swiper-dialog-container .paper-swiper-callout {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 81;
+}
+
+.paper-swiper-dialog-container .paper-swiper-pagination {
+  text-align: center;
+  line-height: 8px;
+  margin-top: 24px;
+}
+
+.paper-swiper-dialog-container .paper-swiper-pagination .paper-swiper-pagination-bullet {
+  margin: 0 5px;
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: #000;
+  opacity: .2;
+  display: inline-block;
+}
+
+.paper-swiper-dialog-container .paper-swiper-pagination .paper-swiper-pagination-bullet.active {
+  opacity: 1;
+  background: #007aff;
+}
+
+.paper-swiper-slide .paper-swiper-text .paper-swiper-headline {
+  margin-top: 15px;
+  padding: 0 16px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.paper-swiper-slide .paper-swiper-text .paper-swiper-subhead {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 18px;
+  -ms-flex: 0 0 72px;
+  flex: 0 0 72px;
+  padding: 0 16px;
+}
+
+.paper-swiper-slide .paper-swiper-text {
+  text-align: center;
+}
+
+.layout-column, .paper-swiper-slide, .paper-swiper-slide .paper-swiper-text {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.layout, .layout-column, .layout-row, .paper-swiper-slide, .paper-swiper-slide .paper-swiper-text {
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.layout-column, .paper-swiper-slide, .paper-swiper-slide .paper-swiper-text {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.layout-align-center-center, .layout-align-end-center, .layout-align-space-around-center, .layout-align-space-between-center, .layout-align-start-center, .paper-swiper-slide .paper-swiper-text {
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  max-width: 100%;
+}
+
+.paper-swiper-slide .paper-swiper-text .paper-swiper-fixed-content-placeholder {
+  -ms-flex: 0 0 93px;
+  flex: 0 0 93px;
+}
